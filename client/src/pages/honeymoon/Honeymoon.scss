@@ -1,0 +1,72 @@
+@import "../../App.scss";
+
+.honeymoon{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 90px;
+    .honeymoon-container{
+        width: 90%;
+        display: flex;
+        gap: 10px;
+
+        @include mobile767{
+            flex-direction: column;
+        }
+
+        .honeymoon-leftSide{
+            flex: 1;
+            height: 100%;
+            color: var(--secondary-color);
+        
+
+            .h-leftSideItem{
+                margin-bottom: 30px;
+                background-color: var(--fourth-color);
+                position: sticky;
+                top: 85px;
+                padding: 20px;
+
+                h2{
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+                    border-bottom: 2px solid white;
+                    padding-bottom: 5px;
+                }
+
+                h3{
+                    padding-bottom: 10px;
+                }
+
+                .h-lsi-input{
+                    margin-bottom: 10px;
+                    &:hover{
+                        color: var(--third-color);
+                        transition: all .15s ease-in;
+                        cursor: pointer;
+                        transform: scale(1.02);
+                    }
+                    span{
+                        cursor: pointer;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .honeymoon-rightSide{
+            flex: 3;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

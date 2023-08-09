@@ -1,0 +1,86 @@
+:root{
+    --main-color:#bb0003; 
+    --secondary-color: white;
+    --third-color: black; 
+    --main-padding: 20px;
+    --fourth-color:#700; 
+    --fifth-color: rgb(226, 243, 249); 
+
+}
+
+*{
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+button{
+    color: var(--secondary-color);
+    outline: none;
+    background-color: var(--main-color);
+    transition: all .15s ease-in;
+    padding-top: 10px;
+    border-width: 0px;
+    padding-left: 10px;
+    border-radius: 1.875rem;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    font-family: Open Sans;
+    font-weight: 400;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+
+}
+
+Body {
+    font-size: 1rem;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: 1.625;
+    text-transform: none;
+    text-decoration: none;
+}
+
+
+
+@mixin mobile991{
+    @media (max-width: 991px){
+        @content;
+    }
+}
+@mixin mobile800{
+    @media (max-width: 800px){
+        @content;
+    }
+}
+
+@mixin mobile767{
+    @media (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin mobile479{
+    @media (max-width: 479px){
+        @content;
+    }
+}
+
+@mixin mobile666{
+    @media (max-width: 666px){
+        @content;
+    }
+}
+
+@mixin mobile555{
+    @media (max-width: 555px){
+        @content;
+    }
+}
+
+

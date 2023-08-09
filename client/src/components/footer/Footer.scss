@@ -1,0 +1,105 @@
+@import "../../App.scss";
+
+.footer{
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: black;
+    padding: 20px 0px;
+    .container{
+        color: var(--font-color-one);
+        width: 92%;
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+        }
+        @include mobile767{
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+
+        .footer-container1{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            img{
+                width: 290px;
+                height: 46px;
+                object-fit: cover;
+            }
+
+            .socialMedia{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                color: white;
+                font-size: 30px;
+                padding: 50px 0px;
+
+                .icon{
+                    &:hover{
+                        color: var(--main-color);
+                        transition: all .15s ease-in;
+                        cursor: pointer;
+                        transform: scale(1.02);
+                    }
+
+                }
+            }
+        }
+
+        .footer-container2{
+            display: flex;
+            justify-content: space-between;
+            gap: 70px;
+            flex: 2;
+            @include mobile666{
+                gap: 30px;
+            }
+
+            .footer-container3{
+                display: flex;
+                flex-direction: column;
+
+                .f-container3-headText{
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    color: var(--main-color);
+                    
+                }
+
+                .f-container3-listText{
+                    color: var(--secondary-color);;
+                    transition: 0.3s;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: var(--main-color);
+                        transition: all .15s ease-in;
+                        cursor: pointer;
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+}

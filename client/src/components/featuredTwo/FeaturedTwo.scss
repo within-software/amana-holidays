@@ -1,0 +1,113 @@
+@import "../../App.scss";
+
+.featuredTwo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 50px 0px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+        align-items: center;
+
+        button{
+            max-width: fit-content;
+        }
+
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+            color: var(--main-color);
+        }
+
+        p{
+            color: rgb(171, 167, 167);
+            text-align: center;
+        }
+
+        .packagesWrapper{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+
+            .packageItem{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                width: 30%;
+                padding: 20px  0px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                @include mobile800{
+                    width: 40%;
+                }
+                @include mobile555{
+                    width: 70%;
+                }
+
+
+                .packageItemUpperPart{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 50%;
+                    img{
+                        width: 90%;
+                        height: 80%px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        overflow: hidden;
+
+                    }
+
+                }
+
+                .packageItemLowerPart{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 20px;
+
+                    .packageLocation{
+                        display: flex;
+                        gap: 10px;
+                        .icon{
+                            font-size: 30px;
+                            color: var(--main-color);
+                        }
+    
+                        span{
+                            color: black;
+                        }
+                    }
+
+                    .packageRating{
+                        color: gold;
+                    }
+                    span{
+                        font-size: 20px;
+                        color: var(--main-color);
+                    }
+                    p{
+                        text-align: center;
+                        color: black;
+                    }
+
+                    .packagePrice{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
